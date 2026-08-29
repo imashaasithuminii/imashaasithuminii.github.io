@@ -1,0 +1,1405 @@
+/* =========================================================
+   SMART BOTTLE SORTING SYSTEM
+   Project Page CSS
+   Matches Main Portfolio Theme
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+  --bg-void: #170b0d;
+  --bg-panel: #1d1012;
+  --bg-panel-alt: #261417;
+
+  --border-soft: #3a2024;
+
+  --burgundy: #7a1626;
+  --burgundy-soft: #5c1420;
+
+  --gold: #c9a24b;
+  --gold-soft: #a9884a;
+
+  --ivory: #f3e8e2;
+  --ivory-dim: #cdb7b1;
+
+  --muted: #8f7276;
+
+  --font-display: "Bodoni Moda", "Times New Roman", serif;
+  --font-body: "Work Sans", "Segoe UI", sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  background: var(--bg-void);
+
+  color: var(--ivory);
+
+  font-family: var(--font-body);
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   BODY BACKGROUND DETAILS
+========================================================= */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  width: 450px;
+  height: 450px;
+
+  top: -220px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(201, 162, 75, 0.07);
+
+  box-shadow:
+    0 0 70px rgba(201, 162, 75, 0.025);
+
+  pointer-events: none;
+
+  z-index: -1;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.project-nav {
+
+  width: 100%;
+
+  padding: 22px 7vw;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 20;
+
+  background: rgba(23, 11, 13, 0.94);
+
+  backdrop-filter: blur(12px);
+
+}
+
+
+.project-nav__brand {
+
+  font-family: var(--font-display);
+
+  font-size: 1.15rem;
+
+  color: var(--ivory);
+
+  letter-spacing: 0.05em;
+
+}
+
+
+.back-link {
+
+  font-size: 0.72rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.15em;
+
+  color: var(--ivory-dim);
+
+  transition: 0.3s ease;
+
+}
+
+
+.back-link:hover {
+
+  color: var(--gold);
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.project-page {
+
+  width: min(1150px, 86%);
+
+  margin: auto;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.project-hero {
+
+  min-height: 78vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 100px 0 80px;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+/* Decorative gold circle */
+
+.project-hero::after {
+
+  content: "";
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(201, 162, 75, 0.15);
+
+  position: absolute;
+
+  right: -130px;
+  top: 80px;
+
+  box-shadow:
+    0 0 35px rgba(201, 162, 75, 0.04);
+
+}
+
+
+/* Small decorative circle */
+
+.project-hero::before {
+
+  content: "";
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+
+  position: absolute;
+
+  right: 90px;
+  top: 225px;
+
+  box-shadow:
+    0 0 12px rgba(201, 162, 75, 0.4);
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+
+  color: var(--gold);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.2em;
+
+  margin-bottom: 18px;
+
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.project-hero h1 {
+
+  max-width: 900px;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(3rem, 7vw, 6.5rem);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+
+  color: var(--ivory);
+
+}
+
+
+.project-hero h1 span {
+
+  color: var(--gold);
+
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+
+  max-width: 680px;
+
+  margin-top: 30px;
+
+  color: var(--ivory-dim);
+
+  font-size: 0.95rem;
+
+  line-height: 1.9;
+
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.project-meta {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 40px;
+
+  margin-top: 45px;
+
+}
+
+
+.meta-item {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+}
+
+
+.meta-label {
+
+  color: var(--muted);
+
+  font-size: 0.62rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.15em;
+
+}
+
+
+.meta-value {
+
+  font-family: var(--font-display);
+
+  font-size: 0.98rem;
+
+  color: var(--ivory);
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-section {
+
+  padding: 32px 0;
+
+  border-top: 1px solid var(--border-soft);
+
+  border-bottom: 1px solid var(--border-soft);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+}
+
+
+/* 75% GOLD CIRCLE */
+
+.progress-circle {
+
+  width: 90px;
+  height: 90px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background:
+
+    conic-gradient(
+
+      var(--gold) 0deg 270deg,
+
+      var(--border-soft) 270deg 360deg
+
+    );
+
+  display: grid;
+
+  place-items: center;
+
+  position: relative;
+
+  box-shadow:
+
+    0 0 10px rgba(201, 162, 75, 0.15),
+
+    0 0 24px rgba(201, 162, 75, 0.06);
+
+}
+
+
+.progress-circle::before {
+
+  content: "";
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  background: var(--bg-void);
+
+  position: absolute;
+
+}
+
+
+.progress-circle span {
+
+  position: relative;
+
+  z-index: 1;
+
+  font-weight: 600;
+
+  font-size: 0.85rem;
+
+  color: var(--gold);
+
+}
+
+
+.progress-info h3 {
+
+  font-family: var(--font-display);
+
+  font-size: 1.25rem;
+
+  font-weight: 500;
+
+  color: var(--ivory);
+
+}
+
+
+.progress-info p {
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+
+  max-width: 650px;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.project-section {
+
+  padding: 100px 0;
+
+  border-bottom: 1px solid var(--border-soft);
+
+}
+
+
+.section-number {
+
+  color: var(--gold);
+
+  font-size: 0.67rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  margin-bottom: 12px;
+
+}
+
+
+.section-title {
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  color: var(--ivory);
+
+  margin-bottom: 25px;
+
+}
+
+
+.section-intro {
+
+  max-width: 720px;
+
+  color: var(--ivory-dim);
+
+  margin-bottom: 45px;
+
+  font-size: 0.92rem;
+
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overview-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+}
+
+
+.overview-card {
+
+  background: var(--bg-panel);
+
+  border: 1px solid var(--border-soft);
+
+  padding: 32px;
+
+  border-radius: var(--radius-sm);
+
+  transition: 0.3s ease;
+
+}
+
+
+.overview-card:hover {
+
+  border-color: rgba(201, 162, 75, 0.35);
+
+  transform: translateY(-4px);
+
+}
+
+
+.card-icon {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 0.8rem;
+
+  margin-bottom: 20px;
+
+}
+
+
+.overview-card h3 {
+
+  font-family: var(--font-display);
+
+  font-size: 1.2rem;
+
+  font-weight: 500;
+
+  margin-bottom: 12px;
+
+}
+
+
+.overview-card p {
+
+  color: var(--muted);
+
+  font-size: 0.84rem;
+
+}
+
+
+/* =========================================================
+   FLOW
+========================================================= */
+
+.flow {
+
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 10px;
+
+  margin-top: 45px;
+
+}
+
+
+.flow-step {
+
+  min-height: 130px;
+
+  background: var(--bg-panel);
+
+  border: 1px solid var(--border-soft);
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition: 0.3s ease;
+
+}
+
+
+.flow-step:hover {
+
+  border-color: rgba(201, 162, 75, 0.35);
+
+  background: var(--bg-panel-alt);
+
+}
+
+
+.flow-number {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 1.25rem;
+
+}
+
+
+.flow-step p {
+
+  font-size: 0.76rem;
+
+  color: var(--muted);
+
+}
+
+
+/* =========================================================
+   VIDEOS
+========================================================= */
+
+.video-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+
+  margin-top: 40px;
+
+}
+
+
+.video-card {
+
+  background: var(--bg-panel);
+
+  border: 1px solid var(--border-soft);
+
+  border-radius: var(--radius-sm);
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+
+}
+
+
+.video-card:hover {
+
+  border-color: rgba(201, 162, 75, 0.3);
+
+}
+
+
+.video-wrapper {
+
+  background: #100708;
+
+}
+
+
+.video-card video {
+
+  width: 100%;
+
+  display: block;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+}
+
+
+.video-content {
+
+  padding: 25px;
+
+}
+
+
+.video-label {
+
+  color: var(--gold);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.15em;
+
+  font-weight: 600;
+
+}
+
+
+.video-content h3 {
+
+  font-family: var(--font-display);
+
+  font-size: 1.3rem;
+
+  font-weight: 500;
+
+  margin: 10px 0 8px;
+
+}
+
+
+.video-content p {
+
+  color: var(--muted);
+
+  font-size: 0.83rem;
+
+}
+
+
+/* =========================================================
+   HARDWARE
+========================================================= */
+
+.hardware-list {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 0 45px;
+
+  border-top: 1px solid var(--border-soft);
+
+}
+
+
+.hardware-item {
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+
+.hardware-name {
+
+  color: var(--ivory);
+
+  font-size: 0.86rem;
+
+  font-weight: 500;
+
+}
+
+
+.hardware-purpose {
+
+  color: var(--muted);
+
+  font-size: 0.76rem;
+
+  text-align: right;
+
+}
+
+
+/* =========================================================
+   IMPLEMENTATION
+========================================================= */
+
+.implementation-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+}
+
+
+.implementation-column h3 {
+
+  font-family: var(--font-display);
+
+  font-size: 1.4rem;
+
+  font-weight: 500;
+
+  margin-bottom: 20px;
+
+}
+
+
+.implementation-column ul {
+
+  list-style: none;
+
+}
+
+
+.implementation-column li {
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+}
+
+
+.implementation-column li::before {
+
+  content: "✦";
+
+  color: var(--gold);
+
+  margin-right: 10px;
+
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.results-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+}
+
+
+.result-card {
+
+  background: var(--bg-panel);
+
+  border: 1px solid var(--border-soft);
+
+  padding: 30px;
+
+}
+
+
+.result-number {
+
+  color: var(--gold);
+
+  font-family: var(--font-display);
+
+  font-size: 1.2rem;
+
+}
+
+
+.result-card h3 {
+
+  font-family: var(--font-display);
+
+  font-size: 1.25rem;
+
+  margin: 15px 0 10px;
+
+}
+
+
+.result-card p {
+
+  color: var(--muted);
+
+  font-size: 0.83rem;
+
+}
+
+
+/* =========================================================
+   CHALLENGES
+========================================================= */
+
+.challenge-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+}
+
+
+.challenge-card {
+
+  padding: 30px;
+
+  border: 1px solid var(--border-soft);
+
+  background: var(--bg-panel);
+
+  transition: 0.3s ease;
+
+}
+
+
+.challenge-card:hover {
+
+  border-color: rgba(201, 162, 75, 0.3);
+
+}
+
+
+.challenge-card span {
+
+  color: var(--gold);
+
+  font-size: 0.63rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.15em;
+
+}
+
+
+.challenge-card h3 {
+
+  font-family: var(--font-display);
+
+  font-size: 1.25rem;
+
+  font-weight: 500;
+
+  margin: 15px 0 10px;
+
+}
+
+
+.challenge-card p {
+
+  color: var(--muted);
+
+  font-size: 0.83rem;
+
+}
+
+
+/* =========================================================
+   FUTURE
+========================================================= */
+
+.future-list {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 0 50px;
+
+}
+
+
+.future-item {
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+}
+
+
+.future-item strong {
+
+  color: var(--ivory);
+
+  font-family: var(--font-display);
+
+  font-size: 1rem;
+
+}
+
+
+.future-item span {
+
+  color: var(--muted);
+
+  font-size: 0.8rem;
+
+}
+
+
+/* =========================================================
+   TEAM TABLE
+========================================================= */
+
+.team-table-wrapper {
+
+  overflow-x: auto;
+
+}
+
+
+.team-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 35px;
+
+}
+
+
+.team-table th,
+.team-table td {
+
+  padding: 18px 15px;
+
+  text-align: left;
+
+  border-bottom: 1px solid var(--border-soft);
+
+}
+
+
+.team-table th {
+
+  color: var(--muted);
+
+  font-size: 0.65rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.13em;
+
+}
+
+
+.team-table td {
+
+  color: var(--ivory-dim);
+
+  font-size: 0.83rem;
+
+}
+
+
+.team-table tbody tr {
+
+  transition: 0.25s ease;
+
+}
+
+
+.team-table tbody tr:hover {
+
+  background: rgba(122, 22, 38, 0.12);
+
+}
+
+
+.team-table tbody td:first-child {
+
+  color: var(--ivory);
+
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.project-end {
+
+  padding: 120px 0;
+
+  text-align: center;
+
+}
+
+
+.project-end h2 {
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  color: var(--ivory);
+
+  margin-bottom: 25px;
+
+}
+
+
+.project-end p:not(.eyebrow) {
+
+  color: var(--muted);
+
+  max-width: 550px;
+
+  margin: 0 auto 35px;
+
+  font-size: 0.9rem;
+
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-button {
+
+  display: inline-block;
+
+  padding: 13px 24px;
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+
+  transition: 0.3s ease;
+
+}
+
+
+.back-button:hover {
+
+  background: var(--gold);
+
+  color: var(--bg-void);
+
+  box-shadow:
+    0 0 20px rgba(201, 162, 75, 0.12);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  padding: 28px 7vw;
+
+  border-top: 1px solid var(--border-soft);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+
+  background: var(--bg-void);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .flow {
+
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  .overview-grid,
+  .challenge-grid,
+  .results-grid {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .project-nav {
+
+    padding: 20px 6%;
+
+  }
+
+
+  .project-page {
+
+    width: 88%;
+
+  }
+
+
+  .project-hero {
+
+    min-height: auto;
+
+    padding: 80px 0;
+
+  }
+
+
+  .project-hero h1 {
+
+    font-size: clamp(2.8rem, 13vw, 4.5rem);
+
+  }
+
+
+  .project-section {
+
+    padding: 70px 0;
+
+  }
+
+
+  .overview-grid,
+  .video-grid,
+  .implementation-grid,
+  .challenge-grid,
+  .results-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .flow {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+  .hardware-list,
+  .future-list {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .hardware-purpose {
+
+    text-align: left;
+
+  }
+
+
+  .progress-section {
+
+    align-items: flex-start;
+
+  }
+
+
+  .project-meta {
+
+    gap: 25px;
+
+  }
+
+
+  footer {
+
+    flex-direction: column;
+
+    gap: 8px;
+
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .flow {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .progress-circle {
+
+    width: 78px;
+    height: 78px;
+
+  }
+
+
+  .progress-circle::before {
+
+    width: 62px;
+    height: 62px;
+
+  }
+
+}
